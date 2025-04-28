@@ -109,6 +109,82 @@
 // }
 
 
+// let n1 = 123
+// let n2 = 911
+// let n3 = 99
+
+
+// if(n1 > n2 && n1 > n3)
+// {
+//     console.log(n1)
+// }
+// else if(n2 > n1 && n2 > n3)
+// {
+//     console.log(n2)
+// }
+// else
+// {
+//     console.log(n3)
+// }
+
+// let a = Number(prompt("Please enter angle a"))
+// let b = Number(prompt("Please enter angle b"))
+// let c = Number(prompt("Please enter angle c"))
+
+
+// if(a + b + c == 180)
+// {
+//     console.log("Valid Triangle")
+// }
+// else
+// {
+//     console.log("Not a valid triangle")
+// }
+
+
+
+// let cel = prompt("Enter temp in cel")
+
+
+// let ans = cel * 9 / 5 + 32
+
+
+// console.log(ans)
+
+
+
+let n1 = Number(prompt("Enter number 1"))
+let n2 = Number(prompt("Enter number 2"))
+let op = prompt("Enter the operator")
+
+if(op == "+")
+{
+    // console.log(n1 + n2)
+    alert(n1 + n2)
+
+}
+else if(op == "-")
+{
+    // console.log(n1 - n2)
+    alert(n1 - n2)
+}
+else if(op == "/")
+{
+    // console.log(n1 / n2)
+   alert(n1 / n2)
+}
+else if(op == "*")
+{
+    // console.log(n1 * n2)
+    alert(n1 * n2)
+
+}
+else
+{
+    // console.log("Invalid Operator")
+   alert("Invalid Operator")
+}
+
 
 
 
