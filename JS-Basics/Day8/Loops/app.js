@@ -161,26 +161,24 @@ let n = 93542
 // }
 
 
-// let str = String(n)
-// let idx = str.length - 1
-
-// while(idx >= 0)
-// {
-//     console.log(str[idx])
-//     idx--
-// }
-
-
 let str = String(n)
-let idx = 0
+let idx = str.length - 1
 
-
-
-while(idx < str.length)
+while(idx >= 0)
 {
     console.log(str[idx])
-    idx++
+    idx--
 }
+
+
+// let str = String(n)
+// let idx = 0
+
+// while(idx < str.length) // idx <= str.length - 1
+// {
+//     console.log(str[idx])
+//     idx++
+// }
 
 
 
