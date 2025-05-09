@@ -164,14 +164,12 @@ while(start < str.length)
 console.log(ans)
 
 
-
-
 // let start = str.length - 1
 // let ans = ""
 
 // while(start >= 0)
 // {
-//     ans += str[start]
+//     ans += str[start] // ans = ans + str[start]
 //     start--
 // }
 
