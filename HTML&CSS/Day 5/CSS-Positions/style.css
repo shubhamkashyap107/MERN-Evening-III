@@ -1,0 +1,13 @@
+.parent{
+    display: flex;
+    border: 5px solid yellow;
+    width: fit-content;
+}
+
+
+.children{
+    background-color: lightcoral;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}

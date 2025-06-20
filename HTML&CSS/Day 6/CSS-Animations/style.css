@@ -1,0 +1,123 @@
+@keyframes myAnimation{
+    0% {
+        background-color: red;
+    }
+    25%{
+        background-color: pink;
+    }
+    50% {
+        background-color: yellow;
+    }
+    75%{
+        background-color: blue;
+    }
+    100% {
+        background-color: green;
+    }
+}
+#dabba{
+    height: 200px;
+    width: 200px;
+    /* background-color: red; */
+    animation-name: myAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
+
+
+#dabba2{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    position: relative;
+    animation-name: myAnimation3;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    /* animation-delay: 3s; */
+    /* animation-direction: reverse; */
+    animation-timing-function: ease-out;
+}
+
+
+/* 
+@keyframes myAnimation2{
+    0%{
+        left: 0px;
+    }
+
+    50%{
+        left: 600px;
+    }
+
+    100%{
+        left: 0px;
+    }
+} */
+
+
+
+
+@keyframes myAnimation3{
+   0%{
+    top: 0px;
+    left : 0px;
+    background-color: red;
+    rotate: 0deg;
+   }
+
+   25%{
+    top: 0px;
+    left : 800px;
+    background-color: green;
+    rotate: 90deg;
+   }
+
+   50%{
+    left: 800px;
+    top: 800px;
+    background-color: red;
+    rotate: 180deg;
+   }
+
+   75%{
+    top: 800px;
+    left:0px;
+    background-color: pink;
+    rotate: 270deg;
+   }
+
+   100%{
+    top: 0px;
+    left: 0px;
+    background-color: blue;
+    rotate: 360deg;
+   }
+}
+
+img{
+    height: 200px;
+    /* margin-left: 500px; */
+    position: relative;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes bounce{
+    0%{
+        top: 0px;
+        rotate: 0deg;
+    }
+    50%{
+        top: 700px;
+        rotate: 360deg;
+
+    }
+    100%{
+        top: 0px;
+        rotate: -360deg;
+    }
+}

@@ -1,0 +1,26 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#navbar{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    top: 0px;
+    z-index: 999;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
