@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#res-navbar{
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 10px 1px 5px lightgrey;
+}
+
+.nav-anchors{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: serif;
+}
+
+
+.nav-anchors:hover{
+    color: #FF5200;
+}
+
+#special-hover:hover{
+    span{
+        color: #FF5200;
+    }
+    p{
+        color: rgb(180, 179, 179);
+    }
+}
