@@ -77,6 +77,12 @@
     font-family: sans-serif;
 }
 
+.cards > div > img{
+    height: 280px;
+    width: 380px;
+    border-radius: 30px;
+}
+
 .cards > img{
     height: 280px;
     width: 380px;
