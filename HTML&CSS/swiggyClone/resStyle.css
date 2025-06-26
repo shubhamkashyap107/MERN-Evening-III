@@ -117,3 +117,15 @@
     /* border: 1px solid red; */
     scrollbar-width: none;
 }
+
+
+.filter-btns{
+    border: 1px solid lightgray;
+    padding: 20px 30px 20px 30px;
+    border-radius: 50px;
+}
+
+.filter-btns:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
