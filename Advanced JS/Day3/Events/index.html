@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+
+    <h1 class="text">Events</h1>
+    
+    <button onclick="btnClickHandler()">Click Me</button>
+
+    <p class="text">Lorem</p>
+
+    <button onclick="darkMode()">Moon</button>
+    <button onclick="lightMode()">Sun</button>
+
+
+    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore assumenda dolorem ut, non atque eligendi aliquid laboriosam consequuntur saepe beatae vero adipisci porro iste consectetur, culpa rem! Doloribus, perspiciatis ut.
+    Quis autem cum eaque, laborum possimus numquam asperiores dignissimos recusandae, atque veniam vitae! Voluptas ratione eligendi tempora ipsa, culpa perferendis commodi, libero dolor, tenetur nisi eum praesentium odio. Quasi, mollitia!
+    Laborum exercitationem, consequatur molestias, voluptates cupiditate placeat excepturi ratione nam porro id voluptas esse inventore. Aliquid quam, optio, necessitatibus inventore eveniet magnam id eaque illo dicta repudiandae cumque? Autem, ea?
+    Eos cum quia, suscipit nemo voluptas consectetur libero, laudantium repudiandae architecto ipsam, ab dolorum exercitationem ex! Veniam voluptate et illum explicabo, incidunt asperiores, accusamus quia quidem inventore vitae sunt aut!
+    Quia laboriosam rerum tempore, ut, delectus commodi blanditiis voluptate, impedit quas molestias inventore excepturi labore! Odio dolorem fugiat, nemo quibusdam nostrum natus quas quam doloribus numquam porro, aspernatur incidunt eum?</div>
+
+
+
+    <script>
+
+        const body = document.getElementById("body")
+        const textTags = document.getElementsByClassName("text")
+
+        function btnClickHandler()
+        {
+            alert("Btn Clicked")
+        }
+
+        function lightMode()
+        {
+            body.style.backgroundColor = "white"
+            for(let item of textTags)
+            {
+                item.style.color = "black"
+            }
+        }
+
+
+        function darkMode()
+        {
+            body.style.backgroundColor = "black"
+            for(let item of textTags)
+            {
+                item.style.color = "white"
+            }
+        }
+    </script>
+
+</body>
+</html>

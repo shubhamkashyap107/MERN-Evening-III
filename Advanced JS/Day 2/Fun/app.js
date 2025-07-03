@@ -1,5 +1,4 @@
 const container = document.getElementById("root")
-
 const users = [
   {
     name: "Aanya Mehra",
