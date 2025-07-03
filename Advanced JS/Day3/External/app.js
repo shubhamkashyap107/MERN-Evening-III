@@ -33,10 +33,6 @@
 
 
 
-
-
-
-
 const sidebar = document.getElementById("sidebar")
 const spans = document.getElementsByClassName("text")
 
@@ -47,13 +43,12 @@ sidebar.addEventListener("mouseenter", () => {
     {
         item.style.display = "inline"
     }
-
 })
 
 
 sidebar.addEventListener("mouseleave", () => {
     sidebar.style.width = "2vw"
-        for(let item of spans)
+    for(let item of spans)
     {
         item.style.display = "none"
     }
