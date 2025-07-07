@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1>Event Delegation</h1>
+
+
+    <main id="dabba" style="border: 5px solid black; display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; width: 80vw; margin: auto; gap: 20px;">
+        <div id="green" style="height: 200px; background-color: green;">green</div>
+        <div id="red" style="height: 200px; background-color: red;">red</div>
+        <div id="pink" style="height: 200px; background-color: pink;">pink</div>
+        <div id="blue" style="height: 200px; background-color: blue;">blue</div>
+        <div id="yellow" style="height: 200px; background-color: yellow;">yellow</div>
+        <div id="orange" style="height: 200px; background-color: orange;">orange</div>
+        <div id="black" style="height: 200px; background-color: black;">black</div>
+        <div id="white" style="height: 200px; background-color: white;">white</div>
+        <div id="purple" style="height: 200px; background-color: purple;">purple</div>
+    </main>
+    <script>
+        const bodyTag = document.getElementById("body")
+        const box = document.getElementById("dabba")
+        box.addEventListener("click", (e) => {
+            // console.log(e)
+            // if(e.target.tagName == "DIV")
+            // {
+            //     bodyTag.style.backgroundColor = e.target.innerText
+            // }
+            if(e.target.tagName == "DIV")
+            {
+                bodyTag.style.backgroundColor = e.target.style.backgroundColor
+            }
+        })
+    </script>
+
+    <script src="./app.js"></script>
+</body>
+</html>
