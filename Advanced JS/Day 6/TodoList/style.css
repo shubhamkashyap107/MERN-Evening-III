@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#main{
+    display: flex;
+    height: 80vh;
+    width: 100vw;
+    /* border: 1px solid black; */
+}
+
+#left, #right{
+    /* border: 1px solid red; */
+    width: 50%;
+}
+
+#left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    /* border: 1px solid black; */
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.w{
+    width: 70%;
+}
+
+
+
+#right{
+    /* border: 1px solid black; */
+    padding: 20px;
+}
+
+#card{
+    /* border: 1px solid red; */
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#delBtn{
+    height: fit-content;
+}
