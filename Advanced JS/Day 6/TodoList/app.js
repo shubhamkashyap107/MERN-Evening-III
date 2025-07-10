@@ -3,7 +3,6 @@ const textAreaBar = document.getElementById("ta")
 const addTaskBtn = document.getElementById("btn")
 const rightSideDiv = document.getElementById("right")
 // localStorage.setItem("todos", JSON.stringify([]))
-
 let existingTodosStr = localStorage.getItem("todos")
 let existingTodos = JSON.parse(existingTodosStr)
 for(let item of existingTodos)
