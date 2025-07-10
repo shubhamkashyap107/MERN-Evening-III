@@ -6,7 +6,6 @@ const rightSideDiv = document.getElementById("right")
 
 let existingTodosStr = localStorage.getItem("todos")
 let existingTodos = JSON.parse(existingTodosStr)
-
 for(let item of existingTodos)
 {
     const card = document.createElement("div")
@@ -87,7 +86,7 @@ addTaskBtn.addEventListener("click", () => {
     let deleteBtn = document.createElement("button")
 
     deleteBtn.addEventListener("click", () => {
-        delTodo(inputBar.value)
+        delTodo(obj.title) 
         card.remove()
     })
 
