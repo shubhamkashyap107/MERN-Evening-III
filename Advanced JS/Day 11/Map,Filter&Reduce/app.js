@@ -181,7 +181,8 @@
 // })
 
 
-for(let item of "qwertyu")
-{
-    console.log(item)
-}
+// for(let item of "qwertyu")
+// {
+//     console.log(item)
+// }
+
