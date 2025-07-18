@@ -1,0 +1,24 @@
+Q. What is the purpose of the map() method in JavaScript? Explain how it works with an example. Then, given an array of product prices in USD, write code using map() to convert those prices to INR (1 USD = 80 INR).
+(Also mention what will happen if you use forEach instead of map in this case.)
+
+
+
+The map method is a part of Array.Prototype in JS. It Helps us iterate over the whole
+array and return a new copy of the array with manipulated data based on the callback
+function provided in the map method. Map is a Higher order function. Map always returns
+array of same size as the original array.
+
+example : 
+
+let pricesInDollar = [2,4,1,9,8,7,5]
+
+let pricesInRupees = pricesInDollar.map((item) => {
+  return item * 80
+})
+
+console.log(pricesInRupees)
+
+
+If we would have used forEach method instead of map, we can not directly get an array from the 
+forEach method, hence we would have been required to create a new array and
+push my elements into it.
