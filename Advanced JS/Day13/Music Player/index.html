@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musically</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<div id="outer">
+
+    <div id="left">
+        
+        <div id="music-player">
+            <img id="displayImg" style="width: 90%;" src="./Media/ph.avif" alt="">
+            <p style="font-size: 32px;" id="displayName"></p>
+            <input value="0" id="slider" style="width: 90%;" type="range">
+            <div>
+                <i id="prev" style="font-size: 50px;" class=" fa-solid fa-backward-step"></i>
+                <i id="play" style="font-size: 50px;" class=" fa-solid fa-circle-play"></i>
+                <i id="next" style="font-size: 50px;" class=" fa-solid fa-forward-step"></i>
+            </div>
+            <input value="20" step="1" id="volume-slider" style="width: 90%;" type="range">
+            
+        </div>
+
+    </div>
+    <div id="right">
+    </div>
+
+</div>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
