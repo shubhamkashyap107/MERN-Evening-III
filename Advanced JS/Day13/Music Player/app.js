@@ -63,22 +63,22 @@ playBtn.addEventListener("click", () => {
 
 for(let item of playlist)
 {
-    let pTag = document.createElement("p")
-    pTag.innerText = item.displayName
-    songsList.appendChild(pTag)
+        let pTag = document.createElement("p")
+        pTag.innerText = item.displayName
+        songsList.appendChild(pTag)
 
-    pTag.addEventListener("click", () => {
-        let clickedSong = playlist.find((item) => {
-            return item.displayName == pTag.innerText
-        })
-        // console.log(clickedSong)
-        currSong.pause()
-        currSong = new Audio(`./Media/${clickedSong.trackName}.mp3`)
-        currSong.play()
-         imageTag.src = "./Media/" + clickedSong.img
-        nameTag.innerText = clickedSong.displayName
-      playBtn.classList.remove("fa-circle-play")
-        playBtn.classList.add("fa-circle-pause")
+        pTag.addEventListener("click", () => {
+            let clickedSong = playlist.find((item) => {
+                return item.displayName == pTag.innerText
+            })
+
+            currSong.pause()
+            currSong = new Audio(`./Media/${clickedSong.trackName}.mp3`)
+            currSong.play()
+            imageTag.src = "./Media/" + clickedSong.img
+            nameTag.innerText = clickedSong.displayName
+            playBtn.classList.remove("fa-circle-play")      
+            playBtn.classList.add("fa-circle-pause")
 
     currSong.addEventListener("timeupdate", () => {
         slider.value = (currSong.currentTime / currSong.duration) * 100
@@ -99,8 +99,8 @@ nextBtn.addEventListener("click", () => {
     {
         currIdx = 0
     }
-      playBtn.classList.remove("fa-circle-play")
-        playBtn.classList.add("fa-circle-pause")
+    playBtn.classList.remove("fa-circle-play")
+    playBtn.classList.add("fa-circle-pause")
     currObj = playlist[currIdx]
     currSong = new Audio(`./Media/${currObj.trackName}.mp3`)
     currSong.play()
@@ -120,8 +120,8 @@ prevBtn.addEventListener("click", () => {
     {
         currIdx = playlist.length - 1
     }
-      playBtn.classList.remove("fa-circle-play")
-        playBtn.classList.add("fa-circle-pause")
+    playBtn.classList.remove("fa-circle-play")
+    playBtn.classList.add("fa-circle-pause")
     currObj = playlist[currIdx]
     currSong = new Audio(`./Media/${currObj.trackName}.mp3`)
     currSong.play()
