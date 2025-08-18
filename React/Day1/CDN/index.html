@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    
+<div id="root"></div>
+
+
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+
+    // root.render("<h1>Hello world</h1>")
+
+    // const pTag = React.createElement("p", {id : "box", class:"hi"} , "Hello World")
+    // const myList = React.createElement("ul", null, [React.createElement("li", null , "Apple"),
+    //  React.createElement("li", null , "Bat"), React.createElement("li", null , "Cat")])
+
+    // // root.render([pTag, myList])
+
+    // root.render(pTag)
+    // root.render(myList)
+    // let count = 10
+    // let time = 17
+
+    // function SayHi()
+    // {
+    //     let styleObj = {backgroundColor : "red"}
+    //     let arr = ["apple", "cat", "ball"]
+    //     return (
+    //         // <div style="background-color:red" className="abc" id="kuchbhi">
+    //         <div style={{backgroundColor : "red"}} className={"abc"} id={count}>
+    //             <h1>{time > 12 ? "Good Afternoon" : "Good Moring"}</h1>
+    //             <div>
+    //                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ex quibusdam accusamus delectus cupiditate autem aspernatur pariatur modi! Laborum, accusamus. Repellendus rerum nesciunt minima quos nemo voluptatem necessitatibus iste. Reprehenderit.
+    //             </div>
+    //             <ul>
+    //                 <li>{arr[0]}</li>
+    //                 <li>{arr[1]}</li>
+    //                 <li>{arr[2]}</li>
+    //             </ul>
+    //         </div>
+    //     )
+    // }
+
+    // root.render(SayHi())
+
+
+
+    const Navbar = () => {
+        return (
+            <div style={{backgroundColor : "blue", display : "flex", justifyContent : "space-between", height : "60px", alignItems : "center"}}>
+
+                <h3>LOGO</h3>
+
+                <div>
+                    <a style={{color : "white", textDecoration : "none"}} href="">Home</a>
+                    <a style={{color : "white", textDecoration : "none"}} href="">About</a>
+                    <a style={{color : "white", textDecoration : "none"}} href="">Profile</a>
+                </div>
+                
+            </div>
+        )
+    }
+
+
+    root.render(Navbar())
+
+
+
+
+
+</script>
+
+</body>
+</html>
