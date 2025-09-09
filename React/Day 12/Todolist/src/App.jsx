@@ -7,12 +7,13 @@ export const taskContext = createContext()
 
 const App = () => {
   const[tasks, setTasks] = useState([])
+  console.log(tasks)
 
   return (
     <taskContext.Provider value={{tasks, setTasks}}>
 
     <div className="flex">
-      <Form />
+      <Form  />
       <Display />
     </div>
     
