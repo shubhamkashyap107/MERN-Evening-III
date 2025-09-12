@@ -5,7 +5,7 @@ const UserContext = createContext()
 
 const UserContextProvider = ({children}) => {
     const userData = null
-    // const userData = {username : "Shubham"}
+    // const userData = {use rname : "Shubham"}
     return (
         <UserContext.Provider value={userData}>
             {children}
