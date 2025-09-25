@@ -1,7 +1,8 @@
-import { useState } from "react"
-import {useSelector} from "react-redux"
+import { useEffect, useState } from "react"
+import {useDispatch, useSelector} from "react-redux"
 import toast from "react-hot-toast"
 import { GoogleGenAI } from "@google/genai";
+import { addRecipe } from "../Utils/CacheSlice";
 
 const ai = new GoogleGenAI({apiKey : import.meta.env.VITE_API_KEY});
 
@@ -9,12 +10,27 @@ const Form = ({selectedItem, setSelectedItem, aiRes, setAiRes, showBtn, setShowB
 
 
   const data = useSelector(store => store.recipe)
+  const data2 = useSelector(store => store.cache)
   const[temp, setTemp] = useState(-1)
   const[text, setText] = useState("")
+  const dispatch = useDispatch()
+  const[suggestions, setSuggestions] = useState([])
   // console.log(text)
 
+  useEffect(() => {
+    let temp = text.trim().toLowerCase()
+    if(temp.length == 0){
+      setSuggestions([])
+      return
+    }
+    let ans = data2.filter((item) => {
+      return item.query.includes(temp)
+    })
+    setSuggestions(ans)
+  }, [text])
+
   return (
-    <div className="w-[50vw] bg-white rounded-2xl shadow-md p-6 border border-orange-200 h-[40vh]">
+    <div className="w-[50vw] bg-white rounded-2xl shadow-md p-6 border border-orange-200 min-h-[40vh]">
       <h2 className="text-xl font-semibold text-orange-500 mb-4">Add Recipe</h2>
       <div className="flex flex-col gap-4">
         {/* Text Input */}
@@ -22,12 +38,25 @@ const Form = ({selectedItem, setSelectedItem, aiRes, setAiRes, showBtn, setShowB
           type="text" 
           value={text}
           onChange={(e) => {
-           
             setText(e.target.value)
           }}
           placeholder="Recipe Name" 
           className="rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-300 disabled:bg-gray-100 disabled:cursor-not-allowed"
         />
+
+       {suggestions.length > 0 && <div className="border border-gray-300">
+
+          {suggestions.map((item) => {
+            return (
+              <p onClick={() => {
+                setText(item.query)
+              }} className="hover:bg-gray-300 cursor-pointer">{item.query}</p>
+            )
+          })}
+          {/* <p className="hover:bg-gray-300 cursor-pointer">Chai</p> */}
+          {/* <p className="hover:bg-gray-300 cursor-pointer">Chai Rusk</p> */}
+          {/* <p className="hover:bg-gray-300 cursor-pointer">Chai Toast</p> */}
+        </div>}
 
 
         {/* OR Divider */}
@@ -72,14 +101,25 @@ const Form = ({selectedItem, setSelectedItem, aiRes, setAiRes, showBtn, setShowB
                 model : "gemini-2.5-flash",
                 contents : prompt + text
               })
+              dispatch(addRecipe({query : text, aiResult : JSON.parse(res.text.slice(8, res.text.length - 4))}))
               setShowBtn(true)
-              // console.log(res)
-              // console.log(res.text.slice(8, res.text.length - 4))
               setAiRes(JSON.parse(res.text.slice(8, res.text.length - 4)))
               setText("")
-              // console.log(JSON.parse(res.text))
             }
-            getGeminiSeData()
+            const foundItem = data2.find((item) => {
+              return item.query == text.toLowerCase()
+            })
+            console.log(foundItem)
+            if(!foundItem){
+              getGeminiSeData()
+              return 
+            }
+            else
+            {
+              setAiRes(foundItem?.aiResult)
+              setText("")
+
+            }
           }
           else if(temp != -1)
           {

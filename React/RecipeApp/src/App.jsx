@@ -8,7 +8,7 @@ const App = () => {
   const[aiRes, setAiRes] = useState({})
   const[showBtn, setShowBtn] = useState(true)
 
-  console.log(aiRes)
+  // console.log(aiRes)
 
   return (
     <div className="min-h-[100vh] bg-gradient-to-br from-orange-100 via-yellow-50 to-pink-100 p-6">
