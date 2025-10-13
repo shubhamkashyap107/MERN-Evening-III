@@ -19,18 +19,19 @@ const Home = () => {
   return (
     <div className="relative">
 
-    {showModal && <MOdal setter={setShowModal} imgSrc={images[curr]} />}
-    
-    <div className="grid grid-cols-4">
+      {showModal && <MOdal setter={setShowModal} imgSrc={images[curr]} />}
+      
+      <div className="grid grid-cols-4">
 
-      {images.map((item, index) => {
-        return <img onClick={() => {
-          setShowModal(true)
-          setCurr(index)
-        }} src={item} />
-      })}
+        {images.map((item, index) => {
+          return <img onClick={() => {
+            setShowModal(true)
+            setCurr(index)
+          }} src={item} />
+        })}
 
-    </div>
+      </div>
+      
     </div>
 
   )
