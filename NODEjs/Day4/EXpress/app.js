@@ -1,6 +1,5 @@
 const express = require("express")
 const app = express()
-
 app.use(express.json())
 
 let arr = [
@@ -43,8 +42,6 @@ app.get("/get-user-through-query", (req, res) => {
     })
     res.json(foundUser)
 })
-
-
 
 
 app.listen(8080, () => {
