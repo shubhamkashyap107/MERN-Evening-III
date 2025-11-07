@@ -2,9 +2,13 @@ require("dotenv").config()
 const express = require("express")
 const mongoose = require("mongoose")
 const{ todoRouter } = require("./Routes/TodoRoutes")
+const cors = require("cors")
 const app = express()
 
-
+app.use(cors({
+    origin : ["http://localhost:5173", "http://localhost:5174" ],
+    methods : ["GET", "POST", "DELETE", "PUT", "PATCH"]
+}))
 app.use(express.json())
 app.use(todoRouter)
 
