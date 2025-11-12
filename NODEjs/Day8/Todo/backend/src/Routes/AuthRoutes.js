@@ -19,7 +19,6 @@ router.post("/signup", async(req, res) => {
             throw new Error("Invalid Name / Please enter a valid name")
         }
 
-
         if(!password || password.length < 8)
         {
             throw new Error("Please provide a password / Password should be atleast 8 characters")
@@ -59,13 +58,20 @@ router.post("/login", async(req, res) => {
         const token = jwt.sign({id : foundUser._id}, process.env.JWT_SECRET)
 
         res.cookie("token", token).json({msg : "done"})
+       
 
     } catch (error) {
         res.status(400).json({error : error.message})
     }
 })
 
-
+router.post("/logout", async(req, res) => {
+    try {
+        res.cookie("token", null).json({msg : "Done"})
+    } catch (error) {
+        res.status(400).json({error : error.message})
+    }
+})
 
 
 module.exports = {
